@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cook">
+	
+	<!-- 레시피 작성 -->
+	<insert id="write" parameterType="com.hb.mybatis.BbsVO">
+		insert into cook_bbs values(idx.nextval, #{id}, #{title}, #{category}, #{image}, #{contents1}, #{contents2})
+	</insert>
+	
+	<select id="list" resultType="com.hb.mybatis.BbsVO">
+		select * from cook_bbs
+	</select>
+	
+	
+</mapper>
+
+
+
+
+
+
+
+
